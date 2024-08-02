@@ -1,6 +1,6 @@
 import logging
 import threading
-from dnslib import DNSRecord, QTYPE, RR, A
+from dnslib import QTYPE, RR, A
 from dnslib.server import DNSServer
 from ipaddress import ip_address
 
@@ -18,8 +18,8 @@ class dns_resolver:
         for question in request.questions:
             if question.qtype == QTYPE.A and question.qname.matchSuffix(SLD):
                 rr = create_a_record(str(question.qname))
-                if rr:
-                    reply.add_answer(rr)
+                if rr: reply.add_answer(rr)
+
         return reply
 
 def create_a_record(query_name):
@@ -40,6 +40,7 @@ def create_a_record(query_name):
 def get_ip_from_query(octets):
     if len(octets) < 5:
         raise ValueError("Invalid query format")
+
     ip_str = ".".join(octets[:4])
     ip = ip_address(ip_str)
     return str(ip)
