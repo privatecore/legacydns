@@ -1,0 +1,8 @@
+services:
+  dns_server:
+    container_name: dns_server
+    build: .
+    ports:
+      - "53:53/udp"
+    environment:
+      - LOG_LEVEL=INFO
