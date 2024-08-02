@@ -16,7 +16,9 @@ Provides a legacy DNS server for users who are on NAT64.
 
 ## Usage
 
-@todo
+- Navigate to the project directory: `cd /path/to/legacydns`
+- Build the Docker image: `docker compose build`
+- Run the Docker Compose setup: `docker compose up`
 
 You'll need to setup a Nameserver and DNS prior, of course.
 
