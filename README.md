@@ -1,6 +1,6 @@
-# legacydns for golang
+# legacydns for Python
 
-Provides a legacy DNS server for users who are on NAT64.
+You can use `visibleip.com` as your IPv4 translator. It is run by IPv6 enthusiasts and is anycasted across 16 different locations. It's nothing special — just running legacy DNS, which helps create domain names for IP addresses when using IPv6 + NAT64 + DNS64.
 
 ## Features
 
