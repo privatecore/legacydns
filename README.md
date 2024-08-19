@@ -4,21 +4,21 @@ You can use `visibleip.com` as your IPv4 translator. It is run by IPv6 enthusias
 
 ## Features
 
-- Responds with the A record corresponding a name, like `1.1.1.1.visibleip.com` will return `1.1.1.1`
+Responds with the A record corresponding a name, like `1.1.1.1.visibleip.com` will return `1.1.1.1`
 
 ## Example
 
-- Try it out, type `host IPv4_ADDRESS.visibleip.com` in your terminal.
+Try it out, type `host IPv4_ADDRESS.visibleip.com` in your terminal.
 
 ## Use Case
 
-- This makes it easier to work with your grandpa's legacy IPv4 networks.
+This makes it easier to work with your grandpa's legacy IPv4 networks.
 
 ## Usage
 
 - Navigate to the project directory: `cd /path/to/legacydns`
-- Build the Docker image: `docker compose build`
-- Run the Docker Compose setup: `docker compose up`
+- Build the Docker image: `docker compose build --no-cache`
+- Run the Docker Compose setup: `docker compose up --detach`
 
 You'll need to setup a Nameserver and DNS prior, of course.
 
