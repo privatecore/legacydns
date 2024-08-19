@@ -1,8 +1,10 @@
 services:
-  dns_server:
-    container_name: dns_server
+  legacydns:
+    container_name: legacydns
     build: .
     ports:
       - "53:53/udp"
+    volumes:
+      - .:/app
     environment:
       - LOG_LEVEL=INFO
